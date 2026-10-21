@@ -1,0 +1,9 @@
+[
+  {"company":"Splice","kind":"greenhouse","token":"splice","careers":"https://job-boards.greenhouse.io/splice","fit":"Cloud platform for music creation and sounds"},
+  {"company":"AudioMob","kind":"greenhouse","token":"audiomob","careers":"https://job-boards.greenhouse.io/audiomob","fit":"Audio advertising technology"},
+  {"company":"Descript","kind":"greenhouse","token":"descript","careers":"https://job-boards.greenhouse.io/descript","fit":"Audio and video editing software"},
+  {"company":"SoundCloud","kind":"greenhouse","token":"soundcloud71","careers":"https://job-boards.greenhouse.io/soundcloud71","fit":"Music streaming and artist platform"},
+  {"company":"DistroKid","kind":"greenhouse","token":"distrokid","careers":"https://job-boards.greenhouse.io/distrokid","fit":"Digital music distribution"},
+  {"company":"Fender","kind":"greenhouse","token":"fender","careers":"https://job-boards.greenhouse.io/fender","fit":"Musical instruments and music-learning technology"},
+  {"company":"Audinate","kind":"lever","token":"audinate","careers":"https://jobs.lever.co/audinate","fit":"Professional networked audio technology"}
+]
