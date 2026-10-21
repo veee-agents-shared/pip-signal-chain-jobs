@@ -13,3 +13,7 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 17:04 Refreshed and validated 279 unique live roles from ten sources, passing the 200-listing build target; 44 are explicitly remote and 39 disclose salary ranges.
 2026-10-21 17:06 Built and validated the first generated Weekly Signal issue from persistent first-seen dates and passed its outward-action review.
 2026-10-21 17:07 Published the 279-role board and first weekly issue, updated daily metrics to 279 listings and ten sources, and verified both live pages at HTTP 200 with data-derived counts.
+2026-10-21 17:20 Re-read the updated GOAL.md, adopted the weekly spin-off ritual, and confirmed email and Bluesky commands exist but provisioning is still pending.
+2026-10-21 17:20 Ran the core daily refresh first: all ten official feeds succeeded and the board remained at 279 jobs with zero additions or expirations.
+2026-10-21 17:21 Created IDEAS.md, registered Weekly Signal as the first experiment, added four data-derived ideas, and recorded a zero-view/zero-visitor GitHub traffic baseline for its seven-day test.
+2026-10-21 17:21 Audited role categories, fixed department-priority errors affecting finance, marketing design, manufacturing, procurement, IT, and program-management roles, and added four passing regression tests.

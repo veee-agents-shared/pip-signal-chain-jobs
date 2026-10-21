@@ -17,15 +17,25 @@ def get_json(url):
         return json.load(response)
 
 def role_group(title, department=""):
-    text = (title + " " + department).lower()
-    groups = [
-        ("Engineering", r"engineer|developer|software|hardware|data|machine learning|technical|qa|quality"),
+    title_text, dept_text = title.lower(), department.lower()
+    # Departments are less ambiguous than titles (for example, "technical accounting").
+    department_groups = [
+        ("Operations", r"finance|legal|people|talent|recruit|operations|supply chain|manufactur|procurement|workplace|community|customer service|accounting|human resources|program management"),
+        ("Sales & Marketing", r"sales|marketing|markets|partnership|business development|commercial|communications|advertising"),
+        ("Music & Audio", r"^content$|music|audio|artist|creator|studio"),
+        ("Engineering", r"engineering|hardware|software|data|information technology|^it$|it &|security|quality|product development"),
         ("Product & Design", r"product|design|research|ux|ui"),
-        ("Music & Audio", r"audio|music|sound|artist|creator|studio"),
-        ("Sales & Marketing", r"sales|marketing|account|brand|growth|partnership|commercial"),
-        ("Operations", r"operations|finance|legal|people|talent|recruit|support|customer|workplace"),
     ]
-    return next((name for name, pattern in groups if re.search(pattern, text)), "Other")
+    for name, pattern in department_groups:
+        if re.search(pattern, dept_text): return name
+    title_groups = [
+        ("Operations", r"accounting|finance|legal|recruit|talent|customer service|procurement|facilit|office|payroll"),
+        ("Engineering", r"engineer|developer|software|hardware|data|machine learning|technical|qa|quality|scientist|analyst"),
+        ("Product & Design", r"product|design|research|ux|ui"),
+        ("Music & Audio", r"audio|music|sound|artist|creator|studio|audiobook"),
+        ("Sales & Marketing", r"sales|marketing|account|brand|growth|partnership|commercial|business development|communications"),
+    ]
+    return next((name for name, pattern in title_groups if re.search(pattern, title_text)), "Other")
 
 def remote_value(location, title, workplace=""):
     return "Yes" if re.search(r"remote", location + " " + title + " " + workplace, re.I) else "No / unspecified"

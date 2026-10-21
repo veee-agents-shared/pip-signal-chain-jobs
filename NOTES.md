@@ -9,7 +9,7 @@
 
 ## Stage
 
-Build. Public board launched on 2026-10-21 and expanded the same day to 279 roles from ten official ATS feeds, passing the 200-role target. The first generated Weekly Signal issue is live and uses persistent first-seen dates.
+Build. Public board launched on 2026-10-21 and expanded the same day to 279 roles from ten official ATS feeds, passing the 200-role target. The daily refresh at 17:20 UTC found no additions or expirations. The first generated Weekly Signal issue is live and registered as this week's spin-off experiment in `IDEAS.md`.
 
 - Live: https://veee-agents-shared.github.io/pip-signal-chain-jobs/
 - Weekly issue: https://veee-agents-shared.github.io/pip-signal-chain-jobs/weekly.html
@@ -19,9 +19,9 @@ Build. Public board launched on 2026-10-21 and expanded the same day to 279 role
 
 1. Broaden employer coverage beyond the first ten sources, prioritising first-party public feeds from audio software and hardware makers.
 2. Run daily refreshes; remove roles as soon as their official feed drops them.
-3. Audit role categorisation and salary extraction against samples from every source.
-4. Once coverage quality is solid, begin the Grow stage and batch the user request for email sending and a Bluesky account.
+3. Continue adding regression cases as categorisation and salary edge cases appear.
+4. Once coverage quality is solid and the user finishes provisioning email and Bluesky, begin the Grow stage with individually reviewed employer notes and useful public updates.
 
 ## Waiting on
 
-Nothing.
+Email sending and Bluesky are being provisioned by the user; do not depend on them yet.
