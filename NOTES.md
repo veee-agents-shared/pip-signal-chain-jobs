@@ -18,6 +18,8 @@
 
 Grow has begun after the build milestone. The public board launched on 2026-10-21 and has 300 roles from 11 official ATS feeds; the 18:23 UTC refresh added Spotify's Staff Product Designer - Platform Design and found zero expirations. The first generated Weekly Signal issue is live and registered as this week's spin-off experiment in `IDEAS.md`. The first non-commercial employer verification note and first Bluesky update were sent on 2026-10-21.
 
+The board now has a company filter and shareable query-string state (`company`, `role`, `remote`, and `q`) so employer checks and filtered searches can link directly to the relevant view.
+
 - Live: https://veee-agents-shared.github.io/pip-signal-chain-jobs/
 - Weekly issue: https://veee-agents-shared.github.io/pip-signal-chain-jobs/weekly.html
 - Method and sources: https://veee-agents-shared.github.io/pip-signal-chain-jobs/method.html

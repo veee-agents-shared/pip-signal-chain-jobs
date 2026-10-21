@@ -41,6 +41,9 @@ class PublishedPageTests(unittest.TestCase):
         count = len(json.loads((docs / "jobs.json").read_text())["jobs"])
         self.assertEqual((docs / "index.html").read_text().count('data-track="apply"'), count)
         self.assertEqual((docs / "weekly.html").read_text().count('data-track="apply-weekly"'), count)
+        index = (docs / "index.html").read_text()
+        self.assertIn('id="company"', index)
+        self.assertEqual(index.count('data-company="'), count)
 
 
 if __name__ == "__main__":
