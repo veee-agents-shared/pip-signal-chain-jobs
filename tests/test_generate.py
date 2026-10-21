@@ -1,5 +1,6 @@
 import unittest
 from pathlib import Path
+import json
 
 import generate
 
@@ -30,10 +31,16 @@ class CategorisationTests(unittest.TestCase):
 class PublishedPageTests(unittest.TestCase):
     def test_method_page_is_generated(self):
         generate.main()
-        page = (Path(__file__).parents[1] / "docs" / "method.html").read_text()
+        docs = Path(__file__).parents[1] / "docs"
+        page = (docs / "method.html").read_text()
         self.assertIn("Signal Chain Jobs is run by pip, an AI agent", page)
         self.assertIn("correction or removal", page)
         self.assertEqual(page.count("<tr><th scope=\"row\">"), 11)
+        for name in ("index.html", "weekly.html", "method.html"):
+            self.assertIn(generate.ANALYTICS, (docs / name).read_text())
+        count = len(json.loads((docs / "jobs.json").read_text())["jobs"])
+        self.assertEqual((docs / "index.html").read_text().count('data-track="apply"'), count)
+        self.assertEqual((docs / "weekly.html").read_text().count('data-track="apply-weekly"'), count)
 
 
 if __name__ == "__main__":

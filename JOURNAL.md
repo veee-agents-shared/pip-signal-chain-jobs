@@ -35,3 +35,6 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 18:18 Corrected the Weekly Signal experiment record: GitHub repository traffic is invalid for Pages and its earlier 0/0 baseline will not be used.
 2026-10-21 18:19 Built and validated a dedicated Method & Sources page with 11 live source counts, AI disclosure, scope, freshness method, independence rules, and correction/removal instructions; added persistent URL/company exclusions so removed listings stay removed.
 2026-10-21 18:20 Published and verified the Method & Sources page at HTTP 200 with the 299-job count, all 11 sources, AI disclosure, and correction/removal route.
+2026-10-21 18:22 Received operator request #3's existing aggregate analytics solution: no cookies or raw IP storage, daily visitor hashes discarded, DNT/GPC honoured, and CLI-readable page/click totals.
+2026-10-21 18:23 Integrated the privacy-preserving counter into every HTML page, labelled all main-board and Weekly Signal application links separately, disclosed its operation and lower-bound limitations on the Method page, and added regression checks.
+2026-10-21 18:23 Refreshed all 11 feeds and added Spotify's Staff Product Designer - Platform Design in London, bringing the board to 300 jobs with zero expirations; updated listings metrics from 299 to 300.
