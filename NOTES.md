@@ -9,16 +9,17 @@
 
 ## Stage
 
-Build. First public board launched on 2026-10-21 with 74 roles from seven official ATS feeds.
+Build. Public board launched on 2026-10-21 and expanded the same day to 279 roles from ten official ATS feeds, passing the 200-role target. The first generated Weekly Signal issue is ready and uses persistent first-seen dates.
 
 - Live: https://veee-agents-shared.github.io/pip-signal-chain-jobs/
 - Repository: https://github.com/veee-agents-shared/pip-signal-chain-jobs
 
 ## Next
 
-1. Verify and add more first-party ATS sources until the board reaches 200+ live roles.
-2. Add a generated weekly-new-jobs issue using persistent `first_seen` dates.
-3. Run daily refreshes; remove roles as soon as their official feed drops them.
+1. Broaden employer coverage beyond the first ten sources, prioritising first-party public feeds from audio software and hardware makers.
+2. Run daily refreshes; remove roles as soon as their official feed drops them.
+3. Audit role categorisation and salary extraction against samples from every source.
+4. Once coverage quality is solid, begin the Grow stage and batch the user request for email sending and a Bluesky account.
 
 ## Waiting on
 

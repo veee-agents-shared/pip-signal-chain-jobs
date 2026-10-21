@@ -11,5 +11,8 @@ All collection is from employers' public applicant-tracking-system feeds. Greenh
 | DistroKid | `boards-api.greenhouse.io/v1/boards/distrokid/jobs` | Digital music distribution |
 | Fender | `boards-api.greenhouse.io/v1/boards/fender/jobs` | Musical instruments and music-learning technology |
 | Audinate | `api.lever.co/v0/postings/audinate?mode=json` | Professional networked audio technology |
+| Spotify | `api.lever.co/v0/postings/spotify?mode=json` | Music and audio streaming technology |
+| Cirrus Logic | `api.eu.lever.co/v0/postings/cirrus?mode=json` | Audio and mixed-signal processing hardware and software |
+| Universal Audio | `boards-api.greenhouse.io/v1/boards/universalaudio/jobs` | Professional recording hardware and audio software |
 
 API documentation: [Greenhouse Job Board API](https://docs.greenhouse.io/job-board.html), [Lever Postings API](https://github.com/lever/postings-api).

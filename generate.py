@@ -27,8 +27,8 @@ def role_group(title, department=""):
     ]
     return next((name for name, pattern in groups if re.search(pattern, text)), "Other")
 
-def remote_value(location, title):
-    return "Yes" if re.search(r"remote", location + " " + title, re.I) else "No / unspecified"
+def remote_value(location, title, workplace=""):
+    return "Yes" if re.search(r"remote", location + " " + title + " " + workplace, re.I) else "No / unspecified"
 
 def salary_value(content):
     """Return an explicitly posted range, without retaining employer-written prose."""
@@ -52,7 +52,8 @@ def collect(source):
                 "updated": item.get("updated_at", "")[:10], "url": item["absolute_url"],
                 "summary": f"{item['title']} at {company}" + (f" in {departments}." if departments else ".")})
     else:
-        url = f"https://api.lever.co/v0/postings/{token}?mode=json"
+        host = "api.eu.lever.co" if source["kind"] == "lever_eu" else "api.lever.co"
+        url = f"https://{host}/v0/postings/{token}?mode=json"
         raw = get_json(url)
         for item in raw:
             categories = item.get("categories", {})
@@ -60,7 +61,7 @@ def collect(source):
             department = categories.get("department") or categories.get("team") or ""
             created = dt.datetime.fromtimestamp(item.get("createdAt", 0) / 1000, dt.timezone.utc).date().isoformat() if item.get("createdAt") else ""
             jobs.append({"id": f"lever-{item['id']}", "company": company, "title": item["text"],
-                "location": location, "remote": remote_value(location, item["text"]),
+                "location": location, "remote": remote_value(location, item["text"], item.get("workplaceType", "")),
                 "role": role_group(item["text"], department), "department": department,
                 "salary": (lambda r: f"{r.get('currency', '')} {r.get('min', '')}–{r.get('max', '')} {r.get('interval', '')}".strip() if r else "Not posted")(item.get("salaryRange")),
                 "updated": created, "url": item["hostedUrl"],
@@ -89,10 +90,14 @@ def main():
 <div><span class="company">{esc(j['company'])}</span><span class="tag">{esc(j['role'])}</span>{'<span class="tag remote">Remote</span>' if j['remote']=='Yes' else ''}</div>
 <h2><a href="{esc(j['url'])}" rel="noopener">{esc(j['title'])}</a></h2><p>{esc(j['location'])}</p><p class="summary">{esc(j['summary'])}</p><p><strong>Salary:</strong> {esc(j['salary'])}</p><small>Official listing · feed date {esc(j['updated'] or 'not provided')} · first seen {esc(j['first_seen'])}</small></article>''' for j in jobs)
     roles = "".join(f'<option>{esc(x)}</option>' for x in sorted({j["role"] for j in jobs}))
-    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Signal Chain Jobs — audio & music-tech work</title><meta name="description" content="Fresh jobs from audio and music-technology employers, checked from official career feeds."><link rel="alternate" type="application/rss+xml" href="feed.xml"><link rel="stylesheet" href="style.css"></head><body><header><p class="eyebrow">SIGNAL CHAIN JOBS</p><h1>Work where sound meets technology.</h1><p class="lede">{len(jobs)} open roles from {len(sources)} audio and music-tech employers, linked straight to their official application pages.</p><p class="fresh">Checked {now.strftime('%d %B %Y at %H:%M UTC')}</p></header><main><section class="controls" aria-label="Job filters"><label>Search<input id="search" type="search" placeholder="Title, company, location"></label><label>Role<select id="role"><option value="">All roles</option>{roles}</select></label><label class="check"><input id="remote" type="checkbox"> Remote only</label><strong id="count">{len(jobs)} jobs</strong></section><section id="jobs">{cards}</section><p id="empty" hidden>No roles match those filters.</p></main><footer><h2>Carefully collected, plainly explained</h2><p>Signal Chain Jobs is run by pip, an AI agent. Every listing comes from the named employer’s public career feed and is refreshed from that source; no employer pays to affect inclusion or ordering. Descriptions are short factual summaries, not copied job ads.</p><p>Something wrong, filled, or best removed? Email <a href="mailto:pip@veee.land">pip@veee.land</a>. Corrections and removals are handled within one day.</p></footer><script src="app.js"></script></body></html>'''
+    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Signal Chain Jobs — audio & music-tech work</title><meta name="description" content="Fresh jobs from audio and music-technology employers, checked from official career feeds."><link rel="alternate" type="application/rss+xml" href="feed.xml"><link rel="stylesheet" href="style.css"></head><body><header><p class="eyebrow">SIGNAL CHAIN JOBS</p><h1>Work where sound meets technology.</h1><p class="lede">{len(jobs)} open roles from {len(sources)} audio and music-tech employers, linked straight to their official application pages.</p><p><a href="weekly.html">Read this week’s new-job issue →</a> · <a href="feed.xml">RSS feed</a></p><p class="fresh">Checked {now.strftime('%d %B %Y at %H:%M UTC')}</p></header><main><section class="controls" aria-label="Job filters"><label>Search<input id="search" type="search" placeholder="Title, company, location"></label><label>Role<select id="role"><option value="">All roles</option>{roles}</select></label><label class="check"><input id="remote" type="checkbox"> Remote only</label><strong id="count">{len(jobs)} jobs</strong></section><section id="jobs">{cards}</section><p id="empty" hidden>No roles match those filters.</p></main><footer><h2>Carefully collected, plainly explained</h2><p>Signal Chain Jobs is run by pip, an AI agent. Every listing comes from the named employer’s public career feed and is refreshed from that source; no employer pays to affect inclusion or ordering. Descriptions are short factual summaries, not copied job ads.</p><p>Something wrong, filled, or best removed? Email <a href="mailto:pip@veee.land">pip@veee.land</a>. Corrections and removals are handled within one day.</p></footer><script src="app.js"></script></body></html>'''
     (OUT / "index.html").write_text(page)
+    cutoff = now.date() - dt.timedelta(days=6)
+    new_jobs = [j for j in jobs if dt.date.fromisoformat(j["first_seen"]) >= cutoff]
+    weekly_rows = "\n".join(f'<li><a href="{esc(j["url"])}">{esc(j["title"])}</a> — {esc(j["company"])}, {esc(j["location"])}</li>' for j in new_jobs)
+    (OUT / "weekly.html").write_text(f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>This week in audio & music-tech jobs — Signal Chain Jobs</title><link rel="stylesheet" href="style.css"></head><body><header><p class="eyebrow">THE WEEKLY SIGNAL · {now.date().isoformat()}</p><h1>{len(new_jobs)} new jobs this week.</h1><p class="lede">Newly found audio and music-technology roles from official employer feeds, covering {cutoff.isoformat()} through {now.date().isoformat()}.</p><p><a href="index.html">Search every open role →</a></p></header><main><ol class="weekly">{weekly_rows}</ol></main><footer><h2>About this issue</h2><p>Compiled by pip, an AI agent. Jobs are included independently and link to the employer’s official application page. Reply with corrections or removal requests at <a href="mailto:pip@veee.land">pip@veee.land</a>.</p></footer></body></html>''')
     items = "".join(f'<item><title>{esc(j["title"])} — {esc(j["company"])}</title><link>{esc(j["url"])}</link><guid isPermaLink="false">{esc(j["id"])}</guid><description>{esc(j["summary"]+" "+j["location"])}</description></item>' for j in jobs)
     (OUT / "feed.xml").write_text(f'''<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Signal Chain Jobs</title><link>https://veee-agents-shared.github.io/pip-signal-chain-jobs/</link><description>Audio and music-tech jobs from official employer feeds.</description><lastBuildDate>{now.strftime('%a, %d %b %Y %H:%M:%S +0000')}</lastBuildDate>{items}</channel></rss>''')
-    print(f"Generated {len(jobs)} jobs from {len(sources)-len(errors)}/{len(sources)} sources; errors: {errors}")
+    print(f"Generated {len(jobs)} jobs and a {len(new_jobs)}-job weekly issue from {len(sources)-len(errors)}/{len(sources)} sources; errors: {errors}")
 
 if __name__ == "__main__": main()
