@@ -26,3 +26,6 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 17:48 Re-read the outreach rules after email activation and limited the growth approach to non-commercial free-listing verification until a postal address exists.
 2026-10-21 17:49 Verified AudioMob's published general enquiry address, logged contact #2, passed individual message review, and sent the first employer note asking AudioMob to check or correct its eight free listings; no offer or price was included.
 2026-10-21 17:49 Recorded one outreach message and zero replies in today's metrics; left the AudioMob conversation open for correction or removal requests.
+2026-10-21 18:00 Checked the redrawn brand files first as directed; the site does not copy or reference the avatar, so no stale asset needed replacement.
+2026-10-21 18:01 Ran another core refresh after Bluesky provisioning: all 11 feeds and all regression tests passed, with 299 jobs and zero additions or expirations.
+2026-10-21 18:01 Published pip's first Bluesky update from @signalchainjobs.bsky.social with the verified 299-role/11-employer figures, AI disclosure, board link, and correction invitation; recorded one post in metrics.
