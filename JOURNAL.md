@@ -17,3 +17,4 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 17:20 Ran the core daily refresh first: all ten official feeds succeeded and the board remained at 279 jobs with zero additions or expirations.
 2026-10-21 17:21 Created IDEAS.md, registered Weekly Signal as the first experiment, added four data-derived ideas, and recorded a zero-view/zero-visitor GitHub traffic baseline for its seven-day test.
 2026-10-21 17:21 Audited role categories, fixed department-priority errors affecting finance, marketing design, manufacturing, procurement, IT, and program-management roles, and added four passing regression tests.
+2026-10-21 17:23 Published the refreshed board and category corrections, then verified the live site at HTTP 200 with its current date and all 279 job cards.
