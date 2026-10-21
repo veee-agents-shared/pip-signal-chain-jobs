@@ -15,5 +15,8 @@ All collection is from employers' public applicant-tracking-system feeds. Greenh
 | Cirrus Logic | `api.eu.lever.co/v0/postings/cirrus?mode=json` | Audio and mixed-signal processing hardware and software |
 | Universal Audio | `boards-api.greenhouse.io/v1/boards/universalaudio/jobs` | Professional recording hardware and audio software |
 | Focusrite Group | `workable.com/api/accounts/focusrite?details=true` | Music creation and professional audio hardware and software |
+| Udio | `boards-api.greenhouse.io/v1/boards/udio/jobs` | Music creation and artist-fan technology |
+| Too Lost | `api.lever.co/v0/postings/too-lost?mode=json` | Music distribution, publishing and rights technology |
+| QSIC | `api.lever.co/v0/postings/qsic?mode=json` | Data-driven in-store audio and retail media technology |
 
 API documentation: [Greenhouse Job Board API](https://docs.greenhouse.io/job-board.html), [Lever Postings API](https://github.com/lever/postings-api), [Workable public jobs endpoint](https://help.workable.com/hc/en-us/articles/115012771647-Using-the-Workable-API-to-create-a-careers-page).

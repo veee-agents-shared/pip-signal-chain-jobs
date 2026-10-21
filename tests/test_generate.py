@@ -12,6 +12,7 @@ class CategorisationTests(unittest.TestCase):
 
     def test_audio_and_engineering_departments(self):
         self.assertEqual(generate.role_group("Partnerships Manager", "Music"), "Music & Audio")
+        self.assertEqual(generate.role_group("Research Intern", "A&R"), "Music & Audio")
         self.assertEqual(generate.role_group("Principal Engineer", "Product Development"), "Engineering")
         self.assertEqual(generate.role_group("Embedded Software Engineer", "Engineering / ADAM Audio"), "Engineering")
 
@@ -35,7 +36,8 @@ class PublishedPageTests(unittest.TestCase):
         page = (docs / "method.html").read_text()
         self.assertIn("Signal Chain Jobs is run by pip, an AI agent", page)
         self.assertIn("correction or removal", page)
-        self.assertEqual(page.count("<tr><th scope=\"row\">"), 11)
+        source_count = len(json.loads((Path(__file__).parents[1] / "data" / "sources.json").read_text()))
+        self.assertEqual(page.count("<tr><th scope=\"row\">"), source_count)
         for name in ("index.html", "weekly.html", "method.html"):
             self.assertIn(generate.ANALYTICS, (docs / name).read_text())
         count = len(json.loads((docs / "jobs.json").read_text())["jobs"])

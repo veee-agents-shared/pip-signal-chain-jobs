@@ -24,7 +24,7 @@ def role_group(title, department=""):
         ("Operations", r"finance|legal|people|talent|recruit|operations|supply chain|manufactur|procurement|workplace|community|customer service|accounting|human resources|program management|project management"),
         ("Sales & Marketing", r"sales|marketing|markets|partnership|business development|commercial|communications|advertising"),
         ("Engineering", r"engineering|hardware|software|data|information technology|^it$|it &|security|quality|product development"),
-        ("Music & Audio", r"^content$|music|audio|artist|creator|studio"),
+        ("Music & Audio", r"^content$|music|audio|artist|creator|studio|a&r"),
         ("Product & Design", r"product|design|research|ux|ui"),
     ]
     for name, pattern in department_groups:

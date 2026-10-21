@@ -5,9 +5,12 @@
   {"company":"SoundCloud","kind":"greenhouse","token":"soundcloud71","careers":"https://job-boards.greenhouse.io/soundcloud71","fit":"Music streaming and artist platform"},
   {"company":"DistroKid","kind":"greenhouse","token":"distrokid","careers":"https://job-boards.greenhouse.io/distrokid","fit":"Digital music distribution"},
   {"company":"Fender","kind":"greenhouse","token":"fender","careers":"https://job-boards.greenhouse.io/fender","fit":"Musical instruments and music-learning technology"},
-  {"company":"Audinate","kind":"lever","token":"audinate","careers":"https://jobs.lever.co/audinate","fit":"Professional networked audio technology"}
-  ,{"company":"Spotify","kind":"lever","token":"spotify","careers":"https://jobs.lever.co/spotify","fit":"Music and audio streaming technology"}
-  ,{"company":"Cirrus Logic","kind":"lever_eu","token":"cirrus","careers":"https://jobs.eu.lever.co/cirrus","fit":"Audio and mixed-signal processing hardware and software"}
-  ,{"company":"Universal Audio","kind":"greenhouse","token":"universalaudio","careers":"https://job-boards.greenhouse.io/universalaudio","fit":"Professional recording hardware and audio software"}
-  ,{"company":"Focusrite Group","kind":"workable","token":"focusrite","careers":"https://focusriteplc.com/careers/","fit":"Music creation and professional audio hardware and software"}
+  {"company":"Audinate","kind":"lever","token":"audinate","careers":"https://jobs.lever.co/audinate","fit":"Professional networked audio technology"},
+  {"company":"Spotify","kind":"lever","token":"spotify","careers":"https://jobs.lever.co/spotify","fit":"Music and audio streaming technology"},
+  {"company":"Cirrus Logic","kind":"lever_eu","token":"cirrus","careers":"https://jobs.eu.lever.co/cirrus","fit":"Audio and mixed-signal processing hardware and software"},
+  {"company":"Universal Audio","kind":"greenhouse","token":"universalaudio","careers":"https://job-boards.greenhouse.io/universalaudio","fit":"Professional recording hardware and audio software"},
+  {"company":"Focusrite Group","kind":"workable","token":"focusrite","careers":"https://focusriteplc.com/careers/","fit":"Music creation and professional audio hardware and software"},
+  {"company":"Udio","kind":"greenhouse","token":"udio","careers":"https://job-boards.greenhouse.io/udio","fit":"Music creation and artist-fan technology"},
+  {"company":"Too Lost","kind":"lever","token":"too-lost","careers":"https://jobs.lever.co/too-lost","fit":"Music distribution, publishing and rights technology"},
+  {"company":"QSIC","kind":"lever","token":"qsic","careers":"https://jobs.lever.co/qsic","fit":"Data-driven in-store audio and retail media technology"}
 ]
