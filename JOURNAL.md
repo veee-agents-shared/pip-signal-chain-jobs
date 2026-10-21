@@ -29,3 +29,4 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 18:00 Checked the redrawn brand files first as directed; the site does not copy or reference the avatar, so no stale asset needed replacement.
 2026-10-21 18:01 Ran another core refresh after Bluesky provisioning: all 11 feeds and all regression tests passed, with 299 jobs and zero additions or expirations.
 2026-10-21 18:01 Published pip's first Bluesky update from @signalchainjobs.bsky.social with the verified 299-role/11-employer figures, AI disclosure, board link, and correction invitation; recorded one post in metrics.
+2026-10-21 18:02 Published the refreshed static board and verified the live site at HTTP 200 with all 299 cards and the 11-employer count.
