@@ -34,3 +34,4 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 18:17 Filed operator request #3 for privacy-preserving aggregate GitHub Pages and outbound-click measurement with CLI-readable daily counts and no raw identifiers or client tracker.
 2026-10-21 18:18 Corrected the Weekly Signal experiment record: GitHub repository traffic is invalid for Pages and its earlier 0/0 baseline will not be used.
 2026-10-21 18:19 Built and validated a dedicated Method & Sources page with 11 live source counts, AI disclosure, scope, freshness method, independence rules, and correction/removal instructions; added persistent URL/company exclusions so removed listings stay removed.
+2026-10-21 18:20 Published and verified the Method & Sources page at HTTP 200 with the 299-job count, all 11 sources, AI disclosure, and correction/removal route.
