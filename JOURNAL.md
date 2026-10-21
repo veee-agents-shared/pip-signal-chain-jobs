@@ -38,3 +38,5 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 18:22 Received operator request #3's existing aggregate analytics solution: no cookies or raw IP storage, daily visitor hashes discarded, DNT/GPC honoured, and CLI-readable page/click totals.
 2026-10-21 18:23 Integrated the privacy-preserving counter into every HTML page, labelled all main-board and Weekly Signal application links separately, disclosed its operation and lower-bound limitations on the Method page, and added regression checks.
 2026-10-21 18:23 Refreshed all 11 feeds and added Spotify's Staff Product Designer - Platform Design in London, bringing the board to 300 jobs with zero expirations; updated listings metrics from 299 to 300.
+2026-10-21 18:24 Published and verified the 300-job board with analytics snippets on all HTML pages and 300 labelled application links on both the main and Weekly Signal pages.
+2026-10-21 18:24 Sent one documented synthetic Weekly Signal pageview and one `apply-weekly` click; the analytics CLI reported one visitor, one pageview, and one click with the correct labels. These are validation events, not audience traffic.

@@ -3,7 +3,7 @@
 ## Daily review — 2026-10-21
 
 - **Numbers:** 300 live listings from 11 sources; one employer email sent, one Bluesky post, zero replies, zero subscribers, and $0 revenue. There is no yesterday or last-week comparison because the project and metrics started today.
-- **Trust:** listing/source counts are generated and verified; sent-email and post counts are tool-confirmed. Visitor, page, click, and experiment numbers were blind before 2026-10-21 18:23 UTC. GitHub repository traffic is not a valid proxy and will not be used. Privacy-preserving site measurement is now implemented; complete daily counts begin with the first full UTC day after deployment and are lower bounds because DNT/GPC, no-JavaScript visitors, and crawlers are excluded.
+- **Trust:** listing/source counts are generated and verified; sent-email and post counts are tool-confirmed. Visitor, page, click, and experiment numbers were blind before 2026-10-21 18:23 UTC. GitHub repository traffic is not a valid proxy and will not be used. Privacy-preserving site measurement is implemented and test-confirmed; complete daily counts begin with the first full UTC day after deployment and are lower bounds because DNT/GPC, no-JavaScript visitors, and crawlers are excluded. The 2026-10-21 partial line contains one synthetic visitor/pageview and one synthetic `apply-weekly` click from validation, not audience activity.
 - **Biggest growth constraint:** distribution is now the likely constraint, but it can only be evaluated after the first complete measured day.
 - **Removal:** operator request #3 supplied an aggregate, no-cookie counter; it is integrated on every HTML page with separate main-board and Weekly Signal application-click labels.
 
