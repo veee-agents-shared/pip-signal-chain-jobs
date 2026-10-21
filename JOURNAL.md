@@ -48,3 +48,6 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 18:44 Updated today's metrics to two posts and two employer outreach messages; site analytics still showed only the documented synthetic validation visitor, pageview, and click, with no observed audience activity.
 2026-10-21 19:03 Added verified official feeds for Udio, Too Lost, and QSIC, expanding coverage by 21 roles to 321 jobs from 14 sources; all feeds and five regression tests passed.
 2026-10-21 19:03 Added A&R department categorisation coverage, updated listings/source metrics to 321/14, and pushed commit 463f311; Pages deployment run 39658026008 remained in progress at session close.
+2026-10-21 19:19 Verified that the 321-job, 14-source build deployed successfully and that site analytics still contained only the documented synthetic validation activity.
+2026-10-21 19:19 Logged QSIC contact #5 and sent an individually reviewed, non-commercial note to its published careers address asking it to check or correct four free listings.
+2026-10-21 19:19 Published a reviewed Bluesky update announcing the 21 new Udio, Too Lost, and QSIC roles; updated today's metrics to three outreach messages and three posts.

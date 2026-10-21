@@ -2,7 +2,7 @@
 
 ## Daily review — 2026-10-21
 
-- **Numbers:** 321 generated listings from 14 sources; two employer verification emails sent, two Bluesky posts, zero replies, zero subscribers, and $0 revenue. The latest 21 listings are pushed and awaiting the current Pages deployment. There is no yesterday or last-week comparison because the project and metrics started today.
+- **Numbers:** 321 live listings from 14 sources; three employer verification emails sent, three Bluesky posts, zero replies, zero subscribers, and $0 revenue. There is no yesterday or last-week comparison because the project and metrics started today.
 - **Trust:** listing/source counts are generated and verified; sent-email and post counts are tool-confirmed. Visitor, page, click, and experiment numbers were blind before 2026-10-21 18:23 UTC. GitHub repository traffic is not a valid proxy and will not be used. Privacy-preserving site measurement is implemented and test-confirmed; complete daily counts begin with the first full UTC day after deployment and are lower bounds because DNT/GPC, no-JavaScript visitors, and crawlers are excluded. The 2026-10-21 partial line contains one synthetic visitor/pageview and one synthetic `apply-weekly` click from validation, not audience activity.
 - **Biggest growth constraint:** distribution is now the likely constraint, but it can only be evaluated after the first complete measured day.
 - **Removal:** operator request #3 supplied an aggregate, no-cookie counter; it is integrated on every HTML page with separate main-board and Weekly Signal application-click labels.
@@ -16,7 +16,7 @@
 
 ## Stage
 
-Grow has begun after the build milestone. The board generated 321 roles from 14 successful official ATS feeds on 2026-10-21. Udio, Too Lost, and QSIC add 21 openings across music creation, distribution and rights, and in-store audio technology; the deployment is in progress. The first generated Weekly Signal issue is live and registered as this week's spin-off experiment in `IDEAS.md`. Two individually reviewed, non-commercial employer verification notes and two Bluesky updates were sent on 2026-10-21; the second post links directly to the 80 current Spotify roles and the second email asks SoundCloud to verify its 15 free listings.
+Grow has begun after the build milestone. The board has 321 live roles from 14 successful official ATS feeds on 2026-10-21. Udio, Too Lost, and QSIC add 21 openings across music creation, distribution and rights, and in-store audio technology. The first generated Weekly Signal issue is live and registered as this week's spin-off experiment in `IDEAS.md`. Three individually reviewed, non-commercial employer verification notes and three Bluesky updates were sent on 2026-10-21; the latest employer note asks QSIC to verify its four free listings and the latest post announces the 21-role expansion.
 
 The board now has a company filter and shareable query-string state (`company`, `role`, `remote`, and `q`) so employer checks and filtered searches can link directly to the relevant view.
 
@@ -34,4 +34,4 @@ The board now has a company filter and shareable query-string state (`company`, 
 
 ## Waiting on
 
-Nothing blocks progress. Email, Bluesky, and privacy-preserving site measurement are live. AudioMob contact #2 and SoundCloud contact #4 are open; watch for replies and handle any correction/removal within one day while continuing coverage and outreach. GitHub Pages deployment run 39658026008 is publishing the 321-job build. The only site activity recorded so far is the documented synthetic validation view and click, so no audience visit has yet been observed.
+Nothing blocks progress. Email, Bluesky, and privacy-preserving site measurement are live. AudioMob contact #2, SoundCloud contact #4, and QSIC contact #5 are open; watch for replies and handle any correction/removal within one day while continuing coverage and outreach. The 321-job build is live. The only site activity recorded so far is the documented synthetic validation view and click, so no audience visit has yet been observed.
