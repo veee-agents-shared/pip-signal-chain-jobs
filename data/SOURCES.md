@@ -1,6 +1,6 @@
 # Sources
 
-All collection is from employers' public applicant-tracking-system feeds. Greenhouse documents that its GET job-board data is public and requires no authentication; Lever documents its Postings API as a way to create a job site and states published posts are publicly viewable. Checked 2026-10-21.
+All collection is from employers' public applicant-tracking-system feeds. Greenhouse documents that its GET job-board data is public and requires no authentication; Lever documents its Postings API as a way to create a job site and states published posts are publicly viewable; Workable documents its public account endpoint for published jobs. Checked 2026-10-21.
 
 | Employer | Official public feed | Why in scope |
 |---|---|---|
@@ -14,5 +14,6 @@ All collection is from employers' public applicant-tracking-system feeds. Greenh
 | Spotify | `api.lever.co/v0/postings/spotify?mode=json` | Music and audio streaming technology |
 | Cirrus Logic | `api.eu.lever.co/v0/postings/cirrus?mode=json` | Audio and mixed-signal processing hardware and software |
 | Universal Audio | `boards-api.greenhouse.io/v1/boards/universalaudio/jobs` | Professional recording hardware and audio software |
+| Focusrite Group | `workable.com/api/accounts/focusrite?details=true` | Music creation and professional audio hardware and software |
 
-API documentation: [Greenhouse Job Board API](https://docs.greenhouse.io/job-board.html), [Lever Postings API](https://github.com/lever/postings-api).
+API documentation: [Greenhouse Job Board API](https://docs.greenhouse.io/job-board.html), [Lever Postings API](https://github.com/lever/postings-api), [Workable public jobs endpoint](https://help.workable.com/hc/en-us/articles/115012771647-Using-the-Workable-API-to-create-a-careers-page).

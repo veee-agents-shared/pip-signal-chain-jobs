@@ -18,3 +18,6 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 17:21 Created IDEAS.md, registered Weekly Signal as the first experiment, added four data-derived ideas, and recorded a zero-view/zero-visitor GitHub traffic baseline for its seven-day test.
 2026-10-21 17:21 Audited role categories, fixed department-priority errors affecting finance, marketing design, manufacturing, procurement, IT, and program-management roles, and added four passing regression tests.
 2026-10-21 17:23 Published the refreshed board and category corrections, then verified the live site at HTTP 200 with its current date and all 279 job cards.
+2026-10-21 17:39 Verified Workable's documented public published-jobs endpoint and added Focusrite Group as the 11th source, contributing 20 current roles across its audio-technology brands.
+2026-10-21 17:41 Extended salary extraction to explicit single figures and K-suffixed ranges, added regression tests, and increased disclosed salary facts from 39 to 55 across 299 jobs.
+2026-10-21 17:42 Passed review for a factual first Bluesky update, conditional on publishing and verifying the stated 299-role/11-employer count first.

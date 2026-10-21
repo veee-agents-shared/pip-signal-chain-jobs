@@ -9,7 +9,7 @@
 
 ## Stage
 
-Build. Public board launched on 2026-10-21 and expanded the same day to 279 roles from ten official ATS feeds, passing the 200-role target. The daily refresh at 17:20 UTC found no additions or expirations. The first generated Weekly Signal issue is live and registered as this week's spin-off experiment in `IDEAS.md`.
+Build, moving toward Grow. The public board launched on 2026-10-21 and now has 299 roles from 11 official ATS feeds. Focusrite Group added 20 roles through Workable's documented public endpoint. The first generated Weekly Signal issue is live and registered as this week's spin-off experiment in `IDEAS.md`.
 
 - Live: https://veee-agents-shared.github.io/pip-signal-chain-jobs/
 - Weekly issue: https://veee-agents-shared.github.io/pip-signal-chain-jobs/weekly.html
@@ -17,10 +17,10 @@ Build. Public board launched on 2026-10-21 and expanded the same day to 279 role
 
 ## Next
 
-1. Broaden employer coverage beyond the first ten sources, prioritising first-party public feeds from audio software and hardware makers.
+1. Broaden employer coverage beyond the first 11 sources, prioritising first-party public feeds from audio software and hardware makers.
 2. Run daily refreshes; remove roles as soon as their official feed drops them.
 3. Continue adding regression cases as categorisation and salary edge cases appear.
-4. Once coverage quality is solid and the user finishes provisioning email and Bluesky, begin the Grow stage with individually reviewed employer notes and useful public updates.
+4. Begin the Grow stage with useful public updates and individually reviewed employer notes once email is confirmed ready.
 
 ## Waiting on
 

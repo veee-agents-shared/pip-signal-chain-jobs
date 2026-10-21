@@ -20,10 +20,10 @@ def role_group(title, department=""):
     title_text, dept_text = title.lower(), department.lower()
     # Departments are less ambiguous than titles (for example, "technical accounting").
     department_groups = [
-        ("Operations", r"finance|legal|people|talent|recruit|operations|supply chain|manufactur|procurement|workplace|community|customer service|accounting|human resources|program management"),
+        ("Operations", r"finance|legal|people|talent|recruit|operations|supply chain|manufactur|procurement|workplace|community|customer service|accounting|human resources|program management|project management"),
         ("Sales & Marketing", r"sales|marketing|markets|partnership|business development|commercial|communications|advertising"),
-        ("Music & Audio", r"^content$|music|audio|artist|creator|studio"),
         ("Engineering", r"engineering|hardware|software|data|information technology|^it$|it &|security|quality|product development"),
+        ("Music & Audio", r"^content$|music|audio|artist|creator|studio"),
         ("Product & Design", r"product|design|research|ux|ui"),
     ]
     for name, pattern in department_groups:
@@ -42,9 +42,12 @@ def remote_value(location, title, workplace=""):
 
 def salary_value(content):
     """Return an explicitly posted range, without retaining employer-written prose."""
-    text = html.unescape(re.sub(r"<[^>]+>", " ", content or ""))
-    match = re.search(r"(?i)(?:USD|CAD|GBP|EUR|AUD|\$|£|€)\s?[\d,]{2,}(?:\.\d+)?\s*(?:-|–|—|to)\s*(?:USD|CAD|GBP|EUR|AUD|\$|£|€)?\s?[\d,]{2,}(?:\.\d+)?", text)
-    return match.group(0).strip(" ,") if match else "Not posted"
+    text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", content or "")))
+    match = re.search(r"(?i)(?:USD|CAD|GBP|EUR|AUD|\$|£|€)\s?[\d,]{2,}(?:\.\d+)?k?\s*(?:-|–|—|to)\s*(?:USD|CAD|GBP|EUR|AUD|\$|£|€)?\s?[\d,]{2,}(?:\.\d+)?k?", text)
+    if match: return match.group(0).strip(" ,")
+    # A single amount is accepted only immediately after an explicit salary label.
+    match = re.search(r"(?i)\bsalary\s*:\s*((?:USD|CAD|GBP|EUR|AUD|\$|£|€)\s?[\d,]{2,}(?:\.\d+)?k?(?:\s*(?:pa|p\.a\.|per (?:year|annum|hour|month)|annually))?)", text)
+    return match.group(1).strip(" ,") if match else "Not posted"
 
 def collect(source):
     company, token = source["company"], source["token"]
@@ -61,7 +64,7 @@ def collect(source):
                 "salary": salary_value(item.get("content", "")),
                 "updated": item.get("updated_at", "")[:10], "url": item["absolute_url"],
                 "summary": f"{item['title']} at {company}" + (f" in {departments}." if departments else ".")})
-    else:
+    elif source["kind"] in ("lever", "lever_eu"):
         host = "api.eu.lever.co" if source["kind"] == "lever_eu" else "api.lever.co"
         url = f"https://{host}/v0/postings/{token}?mode=json"
         raw = get_json(url)
@@ -76,6 +79,21 @@ def collect(source):
                 "salary": (lambda r: f"{r.get('currency', '')} {r.get('min', '')}–{r.get('max', '')} {r.get('interval', '')}".strip() if r else "Not posted")(item.get("salaryRange")),
                 "updated": created, "url": item["hostedUrl"],
                 "summary": f"{item['text']} at {company}" + (f" in {department}." if department else ".")})
+    elif source["kind"] == "workable":
+        url = f"https://www.workable.com/api/accounts/{token}?details=true"
+        raw = get_json(url)["jobs"]
+        for item in raw:
+            locations = [", ".join(x for x in (loc.get("city"), loc.get("region"), loc.get("country")) if x) for loc in item.get("locations", []) if not loc.get("hidden")]
+            location = "; ".join(dict.fromkeys(locations)) or ", ".join(x for x in (item.get("city"), item.get("state"), item.get("country")) if x) or "Unspecified"
+            department = " / ".join(x for x in (item.get("function"), item.get("department")) if x)
+            jobs.append({"id": f"workable-{item['shortcode']}", "company": company, "title": item["title"],
+                "location": location, "remote": remote_value(location, item["title"], "remote" if item.get("telecommuting") else ""),
+                "role": role_group(item["title"], department), "department": department,
+                "salary": salary_value(item.get("description", "")),
+                "updated": item.get("published_on") or item.get("created_at", "")[:10], "url": item["url"],
+                "summary": f"{item['title']} at {company}" + (f" in {department}." if department else ".")})
+    else:
+        raise ValueError(f"Unsupported source kind: {source['kind']}")
     return jobs
 
 def esc(value): return html.escape(str(value), quote=True)

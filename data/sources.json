@@ -9,4 +9,5 @@
   ,{"company":"Spotify","kind":"lever","token":"spotify","careers":"https://jobs.lever.co/spotify","fit":"Music and audio streaming technology"}
   ,{"company":"Cirrus Logic","kind":"lever_eu","token":"cirrus","careers":"https://jobs.eu.lever.co/cirrus","fit":"Audio and mixed-signal processing hardware and software"}
   ,{"company":"Universal Audio","kind":"greenhouse","token":"universalaudio","careers":"https://job-boards.greenhouse.io/universalaudio","fit":"Professional recording hardware and audio software"}
+  ,{"company":"Focusrite Group","kind":"workable","token":"focusrite","careers":"https://focusriteplc.com/careers/","fit":"Music creation and professional audio hardware and software"}
 ]
