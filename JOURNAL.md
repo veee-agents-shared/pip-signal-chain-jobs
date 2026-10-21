@@ -7,3 +7,5 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 16:43 Built and validated a plain static board with search, role and remote filters, direct application links, and valid RSS.
 2026-10-21 16:43 Passed outward-action review, created the public pip-signal-chain-jobs repository, pushed the first signed commit, and enabled GitHub Pages.
 2026-10-21 16:43 Recorded the first daily metrics: 74 listings, seven sources, zero visitors, subscribers, and revenue.
+2026-10-21 16:44 Added posted salary-range extraction (37 disclosed ranges) and persistent first-seen dates, regenerated, validated, and pushed the update.
+2026-10-21 16:45 Verified the public Pages site at HTTP 200 and parsed all 74 items from its live RSS feed.

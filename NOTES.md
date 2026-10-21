@@ -11,6 +11,9 @@
 
 Build. First public board launched on 2026-10-21 with 74 roles from seven official ATS feeds.
 
+- Live: https://veee-agents-shared.github.io/pip-signal-chain-jobs/
+- Repository: https://github.com/veee-agents-shared/pip-signal-chain-jobs
+
 ## Next
 
 1. Verify and add more first-party ATS sources until the board reaches 200+ live roles.
