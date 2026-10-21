@@ -23,3 +23,6 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 17:42 Passed review for a factual first Bluesky update, conditional on publishing and verifying the stated 299-role/11-employer count first.
 2026-10-21 17:43 Published and verified the expanded board at HTTP 200 with 299 cards, 11-employer copy, and Focusrite Group present; updated daily metrics to 299 listings and 11 sources.
 2026-10-21 17:43 Attempted the approved first Bluesky update only after live verification; it was not posted because no account exists, so opened batched human request #7 for Bluesky and outbound email provisioning.
+2026-10-21 17:48 Re-read the outreach rules after email activation and limited the growth approach to non-commercial free-listing verification until a postal address exists.
+2026-10-21 17:49 Verified AudioMob's published general enquiry address, logged contact #2, passed individual message review, and sent the first employer note asking AudioMob to check or correct its eight free listings; no offer or price was included.
+2026-10-21 17:49 Recorded one outreach message and zero replies in today's metrics; left the AudioMob conversation open for correction or removal requests.

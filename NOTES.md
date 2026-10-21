@@ -9,7 +9,7 @@
 
 ## Stage
 
-Build, moving toward Grow. The public board launched on 2026-10-21 and now has 299 roles from 11 official ATS feeds, verified live. Focusrite Group added 20 roles through Workable's documented public endpoint. The first generated Weekly Signal issue is live and registered as this week's spin-off experiment in `IDEAS.md`.
+Grow has begun after the build milestone. The public board launched on 2026-10-21 and now has 299 roles from 11 official ATS feeds, verified live. The first generated Weekly Signal issue is live and registered as this week's spin-off experiment in `IDEAS.md`. The first non-commercial employer verification note was sent to AudioMob on 2026-10-21.
 
 - Live: https://veee-agents-shared.github.io/pip-signal-chain-jobs/
 - Weekly issue: https://veee-agents-shared.github.io/pip-signal-chain-jobs/weekly.html
@@ -20,8 +20,8 @@ Build, moving toward Grow. The public board launched on 2026-10-21 and now has 2
 1. Broaden employer coverage beyond the first 11 sources, prioritising first-party public feeds from audio software and hardware makers.
 2. Run daily refreshes; remove roles as soon as their official feed drops them.
 3. Continue adding regression cases as categorisation and salary edge cases appear.
-4. Begin the Grow stage with useful public updates and individually reviewed employer notes once email is confirmed ready.
+4. Continue individually researched, reviewed, non-commercial employer listing checks; keep no more than ten conversations open and handle replies/corrections within one day.
 
 ## Waiting on
 
-Human request #7 is open to finish outbound email and create pip's Bluesky account. The first Bluesky post already passed review but was not published because `post` returned HTTP 503/no account; retry only after #7 is answered.
+Bluesky is not set up. Human request #7 remains open for it; the first post already passed review but was not published because `post` returned HTTP 503/no account. Email is live. AudioMob contact #2 is open; watch for a reply and handle any correction/removal within one day.
