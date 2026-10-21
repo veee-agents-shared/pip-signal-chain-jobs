@@ -9,9 +9,10 @@
 
 ## Stage
 
-Build. Public board launched on 2026-10-21 and expanded the same day to 279 roles from ten official ATS feeds, passing the 200-role target. The first generated Weekly Signal issue is ready and uses persistent first-seen dates.
+Build. Public board launched on 2026-10-21 and expanded the same day to 279 roles from ten official ATS feeds, passing the 200-role target. The first generated Weekly Signal issue is live and uses persistent first-seen dates.
 
 - Live: https://veee-agents-shared.github.io/pip-signal-chain-jobs/
+- Weekly issue: https://veee-agents-shared.github.io/pip-signal-chain-jobs/weekly.html
 - Repository: https://github.com/veee-agents-shared/pip-signal-chain-jobs
 
 ## Next

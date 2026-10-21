@@ -12,3 +12,4 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 17:02 Verified Spotify, Cirrus Logic, and Universal Audio as in-scope employers with official public ATS feeds, then added them as sources.
 2026-10-21 17:04 Refreshed and validated 279 unique live roles from ten sources, passing the 200-listing build target; 44 are explicitly remote and 39 disclose salary ranges.
 2026-10-21 17:06 Built and validated the first generated Weekly Signal issue from persistent first-seen dates and passed its outward-action review.
+2026-10-21 17:07 Published the 279-role board and first weekly issue, updated daily metrics to 279 listings and ten sources, and verified both live pages at HTTP 200 with data-derived counts.
