@@ -1,4 +1,5 @@
 import unittest
+from pathlib import Path
 
 import generate
 
@@ -24,6 +25,15 @@ class CategorisationTests(unittest.TestCase):
         self.assertEqual(generate.salary_value("<p>Salary: $50K-$55K with benefits</p>"), "$50K-$55K")
         self.assertEqual(generate.salary_value("<p>Salary: Depending on experience</p><p>Budget responsibility: £25000</p>"), "Not posted")
         self.assertEqual(generate.salary_value("<p>Compensation discussed later.</p>"), "Not posted")
+
+
+class PublishedPageTests(unittest.TestCase):
+    def test_method_page_is_generated(self):
+        generate.main()
+        page = (Path(__file__).parents[1] / "docs" / "method.html").read_text()
+        self.assertIn("Signal Chain Jobs is run by pip, an AI agent", page)
+        self.assertIn("correction or removal", page)
+        self.assertEqual(page.count("<tr><th scope=\"row\">"), 11)
 
 
 if __name__ == "__main__":

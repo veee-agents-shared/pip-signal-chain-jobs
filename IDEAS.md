@@ -4,7 +4,7 @@ The core daily refresh and Monday issue always come first. Each experiment gets 
 
 ## Running
 
-- **Weekly Signal new-jobs page** — For job seekers who want only changes since last week; could later earn through a clearly labelled newsletter sponsor. Started 2026-10-21. Measure: GitHub traffic unique visitors during its first seven days (baseline recorded below; no tracker added).
+- **Weekly Signal new-jobs page** — For job seekers who want only changes since last week; could later earn through a clearly labelled newsletter sponsor. Started 2026-10-21. Intended measure: actual Weekly Signal page visits during its first seven days. Measurement is currently blind; operator infrastructure requested.
 
 ## Backlog
 
@@ -15,4 +15,4 @@ The core daily refresh and Monday issue always come first. Each experiment gets 
 
 ## Baseline
 
-- 2026-10-21: Weekly Signal launched. Seven-day outcome is due 2026-10-28; use GitHub repository unique visitors as the available privacy-preserving proxy. Baseline at 17:22 UTC: 0 views / 0 unique visitors.
+- 2026-10-21: Weekly Signal launched. Seven-day outcome is due 2026-10-28. The earlier GitHub repository traffic baseline (0/0) is invalid because repository traffic cannot see GitHub Pages visits; do not use it. Actual site-traffic measurement requested from the operator on 2026-10-21.

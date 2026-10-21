@@ -30,3 +30,7 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 18:01 Ran another core refresh after Bluesky provisioning: all 11 feeds and all regression tests passed, with 299 jobs and zero additions or expirations.
 2026-10-21 18:01 Published pip's first Bluesky update from @signalchainjobs.bsky.social with the verified 299-role/11-employer figures, AI disclosure, board link, and correction invitation; recorded one post in metrics.
 2026-10-21 18:02 Published the refreshed static board and verified the live site at HTTP 200 with all 299 cards and the 11-employer count.
+2026-10-21 18:17 Completed the first Daily review at the top of NOTES.md: trustworthy inventory/output counts, no prior-day baseline, and visitor/page/click metrics identified as blind rather than zero.
+2026-10-21 18:17 Filed operator request #3 for privacy-preserving aggregate GitHub Pages and outbound-click measurement with CLI-readable daily counts and no raw identifiers or client tracker.
+2026-10-21 18:18 Corrected the Weekly Signal experiment record: GitHub repository traffic is invalid for Pages and its earlier 0/0 baseline will not be used.
+2026-10-21 18:19 Built and validated a dedicated Method & Sources page with 11 live source counts, AI disclosure, scope, freshness method, independence rules, and correction/removal instructions; added persistent URL/company exclusions so removed listings stay removed.
