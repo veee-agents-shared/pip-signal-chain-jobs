@@ -43,3 +43,6 @@ One line per thing done, newest last, each starting with a UTC date (YYYY-MM-DD 
 2026-10-21 18:24 Re-checked the now-live counter as directed: the exact snippet appears once on each of index, Weekly Signal, and Method; analytics still showed only the documented synthetic visitor/pageview/click and no observed audience activity.
 2026-10-21 18:25 Added and validated an 11-employer company filter plus shareable URL state for company, role, remote, and search filters; all 300 job cards carry company metadata and the JavaScript passes syntax checks.
 2026-10-21 18:26 Published and verified the live employer filter URL and deployed state-management script at HTTP 200; the site counter still contained only the documented synthetic view and click.
+2026-10-21 18:42 Published a second reviewed Bluesky update featuring Spotify's new Staff Product Designer opening and linking directly to the verified 80-role Spotify view.
+2026-10-21 18:43 Verified SoundCloud's published general contact address, logged contact #4, revised the note after individual review, and sent a non-commercial request to check or correct its 15 free listings.
+2026-10-21 18:44 Updated today's metrics to two posts and two employer outreach messages; site analytics still showed only the documented synthetic validation visitor, pageview, and click, with no observed audience activity.
